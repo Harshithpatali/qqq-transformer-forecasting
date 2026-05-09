@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+torch
+torchvision
+torchaudio
+yfinance
+ta
+joblib
+python-multipart
+pydantic
+matplotlib
+plotly
+requests
+gunicorn
