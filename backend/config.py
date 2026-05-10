@@ -10,9 +10,6 @@ BASE_DIR = os.path.dirname(
     )
 )
 
-print("\nBASE DIRECTORY:")
-print(BASE_DIR)
-
 # ==========================================
 # MARKET CONFIG
 # ==========================================
@@ -24,7 +21,7 @@ START_DATE = "2000-01-01"
 SEQUENCE_LENGTH = 60
 
 # ==========================================
-# FEATURE COLUMNS
+# FEATURES
 # ==========================================
 
 FEATURE_COLUMNS = [
@@ -56,14 +53,10 @@ FEATURE_COLUMNS = [
     "ATR"
 ]
 
-# ==========================================
-# TARGET COLUMN
-# ==========================================
-
 TARGET_COLUMN = "Target_Return"
 
 # ==========================================
-# TRAIN / VALID / TEST SPLITS
+# SPLITS
 # ==========================================
 
 TRAIN_SPLIT = 0.70
@@ -121,17 +114,14 @@ SCALER_PATH = os.path.join(
 )
 
 # ==========================================
-# DEBUGGING PATHS
+# DEBUGGING
 # ==========================================
 
-print("\nDATA PATH:")
-print(DATA_PATH)
+print("\nBASE_DIR:")
+print(BASE_DIR)
 
-print("\nMODEL PATH:")
+print("\nMODEL_PATH:")
 print(MODEL_PATH)
-
-print("\nSCALER PATH:")
-print(SCALER_PATH)
 
 print("\nMODEL EXISTS:")
 print(os.path.exists(MODEL_PATH))
