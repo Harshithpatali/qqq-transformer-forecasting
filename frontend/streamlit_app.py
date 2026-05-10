@@ -73,7 +73,7 @@ auto_refresh = st.sidebar.checkbox(
 # ==========================================
 
 API_URL = (
-    "http://127.0.0.1:8000/predict"
+    "https://qqq-transformer-forecasting.onrender.com/predict"
 )
 
 # ==========================================
