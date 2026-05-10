@@ -10,6 +10,9 @@ BASE_DIR = os.path.dirname(
     )
 )
 
+print("\nBASE DIRECTORY:")
+print(BASE_DIR)
+
 # ==========================================
 # MARKET CONFIG
 # ==========================================
@@ -53,7 +56,15 @@ FEATURE_COLUMNS = [
     "ATR"
 ]
 
+# ==========================================
+# TARGET COLUMN
+# ==========================================
+
 TARGET_COLUMN = "Target_Return"
+
+# ==========================================
+# TRAIN / VALID / TEST SPLITS
+# ==========================================
 
 TRAIN_SPLIT = 0.70
 
@@ -88,7 +99,7 @@ LEARNING_RATE = 0.0001
 WEIGHT_DECAY = 1e-5
 
 # ==========================================
-# CORRECT PATHS
+# PATHS
 # ==========================================
 
 DATA_PATH = os.path.join(
@@ -109,8 +120,21 @@ SCALER_PATH = os.path.join(
     "feature_scaler.pkl"
 )
 
+# ==========================================
+# DEBUGGING PATHS
+# ==========================================
+
+print("\nDATA PATH:")
+print(DATA_PATH)
+
 print("\nMODEL PATH:")
 print(MODEL_PATH)
 
 print("\nSCALER PATH:")
 print(SCALER_PATH)
+
+print("\nMODEL EXISTS:")
+print(os.path.exists(MODEL_PATH))
+
+print("\nSCALER EXISTS:")
+print(os.path.exists(SCALER_PATH))
