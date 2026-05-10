@@ -1,6 +1,16 @@
 import os
 
 # ==========================================
+# BASE DIRECTORY
+# ==========================================
+
+BASE_DIR = os.path.dirname(
+    os.path.dirname(
+        os.path.abspath(__file__)
+    )
+)
+
+# ==========================================
 # MARKET CONFIG
 # ==========================================
 
@@ -15,38 +25,40 @@ SEQUENCE_LENGTH = 60
 # ==========================================
 
 FEATURE_COLUMNS = [
+
     "Open",
     "High",
     "Low",
     "Close",
     "Volume",
+
     "Returns",
     "Log_Returns",
+
     "Rolling_Mean_5",
     "Rolling_Std_5",
     "Rolling_Volatility_10",
+
     "RSI",
+
     "MACD",
     "MACD_Signal",
+
     "EMA20",
     "EMA50",
+
     "BB_High",
     "BB_Low",
+
     "ATR"
 ]
 
-# ==========================================
-# TARGET COLUMN
-# ==========================================
-
 TARGET_COLUMN = "Target_Return"
 
-# ==========================================
-# TRAINING CONFIG
-# ==========================================
-
 TRAIN_SPLIT = 0.70
+
 VALID_SPLIT = 0.15
+
 TEST_SPLIT = 0.15
 
 # ==========================================
@@ -64,7 +76,7 @@ NUM_LAYERS = 2
 DROPOUT = 0.2
 
 # ==========================================
-# TRAINING HYPERPARAMETERS
+# TRAINING CONFIG
 # ==========================================
 
 BATCH_SIZE = 32
@@ -76,12 +88,14 @@ LEARNING_RATE = 0.0001
 WEIGHT_DECAY = 1e-5
 
 # ==========================================
-# PATHS
+# CORRECT PATHS
 # ==========================================
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-DATA_PATH = os.path.join(BASE_DIR, "data", "qqq_data.csv")
+DATA_PATH = os.path.join(
+    BASE_DIR,
+    "data",
+    "qqq_data.csv"
+)
 
 MODEL_PATH = os.path.join(
     BASE_DIR,
@@ -94,3 +108,9 @@ SCALER_PATH = os.path.join(
     "scalers",
     "feature_scaler.pkl"
 )
+
+print("\nMODEL PATH:")
+print(MODEL_PATH)
+
+print("\nSCALER PATH:")
+print(SCALER_PATH)
